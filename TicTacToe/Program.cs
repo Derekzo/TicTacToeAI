@@ -2,7 +2,14 @@
 using TicTacToe;
 using TicTacToe.Stats;
 
-StatsFileSystemManager.Init();
+if (StatsFileSystemManager.AreStatsEmpty()) { 
+
+    Console.WriteLine("Generating the stats one and only time. About 5 minutes needed");
+
+    StatsFileSystemManager.Init();
+
+    Console.WriteLine();
+}
 
 Console.WriteLine("Tic-Tac-Toe!");
 
